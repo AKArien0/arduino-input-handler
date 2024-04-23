@@ -11,7 +11,7 @@ namespace Input{
 		public:
 			Button(int set_pin);
 			void interrupt_change();
-			void begin(mode, debounce);
+			void begin(int mode, int debounce);
 			bool is_pressed();
 			bool is_just_pressed();
 			bool is_just_released();

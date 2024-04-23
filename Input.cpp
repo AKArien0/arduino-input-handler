@@ -8,7 +8,7 @@ namespace Input{
 		last_state = false;
 	}
 
-	void Button::begin(mode, debounce){
+	void Button::begin(int mode, int debounce){
 		pinMode(pin, mode);
 		debounce_time = debounce;
 		attachInterruptArg(digitalPinToInterrupt(pin), interrupt_change_handler, this, CHANGE);
