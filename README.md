@@ -7,9 +7,12 @@ Currently has :
   ```
   Input::Button my_button(int pin);
   my_button.Begin(PINMODE, int debouncing_timer); /* I strongly reccomend using INPUT_PULLUP for PINMODE
-                                                  if your board has pins that support it. If you do not,
-                                                  invert the result of the button's interrogating methods.
-                                        Example : bool real_state = !my_buttton.is_pressed();  */
+                                                  if your board has pins that support it or make the
+                                                  pullup circuit yourself. If you do not, the result
+                                                  of the button's interrogating methods are inverted.
+                                        Example : bool real_state = !my_buttton.is_pressed();
+                                                  bool actually_just_pressed = my_button.is_just_released();
+                                                  bool actually_just_released = my_button.is_just_pressed();
   my_button.is_pressed();
   my_button.is_just_pressed();
   my_button.is_just_released();
